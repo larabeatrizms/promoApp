@@ -1,11 +1,10 @@
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
 
-interface Promotion {
-  id: string;
-  title: string;
-  uri: string;
-}
+// interface Promotion {
+//   id: string;
+//   title: string;
+//   uri: string;
+// }
 
 export const Container = styled.View`
   flex: 1;
@@ -45,14 +44,6 @@ export const TitleContent = styled.Text`
   margin-bottom: 14px;
 `;
 
-export const CardList = styled(FlatList as new () => FlatList<Promotion>).attrs(
-  {
-    numColumns: 1,
-  },
-)`
-  margin-bottom: 14px;
-`;
-
 export const SafeAreaViewSlider = styled.View`
   flex: 1;
   flex-direction: row;
@@ -61,18 +52,52 @@ export const SafeAreaViewSlider = styled.View`
 
 export const Card = styled.View`
   position: relative;
-  left: -75px;
-  /* transform: translateX(50); */
-  /* width: 190px; */
-
-  margin-left: 0;
-  padding-left: 0;
+  left: -64px;
 `;
 
 export const CardImage = styled.Image`
-  width: 190px;
+  width: 220px;
   height: 224px;
-  border-radius: 20px;
+  border-radius: 10px;
+
+  /* transform: scale(2); */
 
   margin-left: 0;
+`;
+
+export const ModalContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  /* margin: 150px 10px;
+  padding: 5px;
+  border-radius: 20px;
+
+  background-color: #ebebeb; */
+`;
+
+export const ModalHeader = styled.View`
+  width: 100%;
+  padding: 10px 5px 0 0;
+
+  align-items: flex-end;
+`;
+
+export const ModalButtonClose = styled.TouchableOpacity`
+  position: relative;
+  top: 190px;
+  right: 16px;
+  width: 100%;
+  z-index: 1;
+
+  align-items: flex-end;
+`;
+
+export const ModalImage = styled.Image`
+  width: 98%;
+  height: 95%;
+  /* background-color: pink; */
+
+  border-radius: 5px;
 `;
