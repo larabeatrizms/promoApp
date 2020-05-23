@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Dimensions,
-  TouchableWithoutFeedback,
-  View,
-  Image,
-} from 'react-native';
+import { Dimensions, TouchableWithoutFeedback, View } from 'react-native';
 
 import Carousel from 'react-native-snap-carousel';
 import ImageZoom from 'react-native-image-pan-zoom';
@@ -153,7 +148,7 @@ const Semanal: React.FC = () => {
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
             onSnapToItem={(index) => setActiveIndexFirst(index)}
-            renderItem={({ item, index }) => (
+            renderItem={({ item }) => (
               <Card>
                 <TouchableWithoutFeedback onPress={handlePressFirst}>
                   <CardImage
@@ -185,7 +180,7 @@ const Semanal: React.FC = () => {
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
             onSnapToItem={(index) => setActiveIndexSecond(index)}
-            renderItem={({ item, index }) => (
+            renderItem={({ item }) => (
               <TouchableWithoutFeedback onPress={handlePressSecond}>
                 <Card>
                   <CardImage

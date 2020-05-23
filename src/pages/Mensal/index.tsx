@@ -94,7 +94,7 @@ const Mensal: React.FC = () => {
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
             onSnapToItem={(index) => setActiveIndex(index)}
-            renderItem={({ item, index }) => (
+            renderItem={({ item }) => (
               <Card>
                 <TouchableWithoutFeedback onPress={handlePressImage}>
                   <CardImage
