@@ -31,6 +31,15 @@ export const TitleContainer = styled.Text`
   margin-bottom: 10px;
 `;
 
+export const HeaderContent = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+  margin-right: 8px;
+`;
+
 export const TitleContent = styled.Text`
   font-size: 24px;
   letter-spacing: 0.5px;
@@ -39,7 +48,6 @@ export const TitleContent = styled.Text`
 
   padding-left: 14px;
   padding-right: 14px;
-  margin-bottom: 14px;
 `;
 
 export const ModalButtonClose = styled.TouchableOpacity`
@@ -61,7 +69,6 @@ export const ModalImage = styled.Image`
 export const Card = styled.View`
   flex: 1;
 
-  /* background-color: pink; */
   margin: 10px;
 `;
 
@@ -71,4 +78,10 @@ export const CardImage = styled.Image`
   border-radius: 10px;
 
   /* transform: scale(2); */
+`;
+
+export const SafeAreaViewSlider = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
 `;

@@ -31,6 +31,15 @@ export const TitleContainer = styled.Text`
   margin-bottom: 10px;
 `;
 
+export const HeaderContent = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+  margin-right: 8px;
+`;
+
 export const TitleContent = styled.Text`
   font-size: 24px;
   letter-spacing: 0.5px;
@@ -39,7 +48,6 @@ export const TitleContent = styled.Text`
 
   padding-left: 14px;
   padding-right: 14px;
-  margin-bottom: 14px;
 `;
 
 export const ModalButtonClose = styled.TouchableOpacity`
