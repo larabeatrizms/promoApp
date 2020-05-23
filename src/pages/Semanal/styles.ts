@@ -1,5 +1,9 @@
 import styled from 'styled-components/native';
 
+import { Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
+
 // interface Promotion {
 //   id: string;
 //   title: string;
@@ -40,18 +44,16 @@ export const TitleContent = styled.Text`
 
 export const ModalButtonClose = styled.TouchableOpacity`
   position: relative;
-  top: 190px;
-  right: 16px;
+  top: -5px;
+  left: ${Dimensions.get('window').width - 74}px;
   width: 100%;
-  z-index: 1;
 
-  align-items: flex-end;
+  z-index: 1;
 `;
 
 export const ModalImage = styled.Image`
   width: 98%;
   height: 95%;
-  /* background-color: pink; */
 
   border-radius: 5px;
 `;

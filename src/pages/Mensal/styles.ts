@@ -44,12 +44,10 @@ export const TitleContent = styled.Text`
 
 export const ModalButtonClose = styled.TouchableOpacity`
   position: relative;
-  top: 190px;
-  right: 16px;
-  width: 100%;
-  z-index: 1;
-
-  align-items: flex-end;
+  top: -10px;
+  left: ${Dimensions.get('window').width - 33}px;
+  width: 30px;
+  height: 30px;
 `;
 
 export const ModalImage = styled.Image`

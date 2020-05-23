@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { View, TouchableWithoutFeedback } from 'react-native';
+import { View, TouchableWithoutFeedback, Dimensions } from 'react-native';
+import ImageZoom from 'react-native-image-pan-zoom';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -33,12 +34,20 @@ const Mensal: React.FC = () => {
           <ModalButtonClose onPress={() => setModalVisible(!modalVisible)}>
             <Icon name="close-circle" size={24} color="#e83f5b" />
           </ModalButtonClose>
-          <ModalImage
-            source={{
-              uri: 'https://i.gyazo.com/8fc06923813195cfc604d38bd8cc52ab.png',
-            }}
-            resizeMode="contain"
-          />
+          <ImageZoom
+            cropWidth={Dimensions.get('window').width}
+            cropHeight={550}
+            imageWidth={400}
+            imageHeight={550}
+          >
+            <ModalImage
+              enableHorizontalBounce
+              source={{
+                uri: 'https://i.gyazo.com/8fc06923813195cfc604d38bd8cc52ab.png',
+              }}
+              resizeMode="contain"
+            />
+          </ImageZoom>
         </View>
       </CardModal>
       <Header />

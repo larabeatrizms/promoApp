@@ -22,20 +22,7 @@ const CardModal: React.FC<CardModalProps> = ({ visible, children }) => {
       backdropTransitionInTiming={600}
       backdropTransitionOutTiming={600}
     >
-      <Container
-        style={{
-          shadowColor: '#000',
-          shadowOffset: {
-            width: 0,
-            height: 4,
-          },
-          shadowOpacity: 0.32,
-          shadowRadius: 5.46,
-
-          elevation: 9,
-        }}
-      />
-      {children}
+      <Container>{children}</Container>
     </Modal>
   );
 };

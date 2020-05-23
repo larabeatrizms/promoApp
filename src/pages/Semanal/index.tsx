@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { Dimensions, TouchableWithoutFeedback, View } from 'react-native';
+import {
+  Dimensions,
+  TouchableWithoutFeedback,
+  View,
+  Image,
+} from 'react-native';
 
 import Carousel from 'react-native-snap-carousel';
+import ImageZoom from 'react-native-image-pan-zoom';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -101,15 +107,21 @@ const Semanal: React.FC = () => {
           <ModalButtonClose onPress={() => setModalVisible(!modalVisible)}>
             <Icon name="close-circle" size={24} color="#e83f5b" />
           </ModalButtonClose>
-          <ModalImage
-            source={{
-              uri:
-                list === 1
-                  ? DATA1[activeIndexFirst].uri
-                  : DATA2[activeIndexSecond].uri,
-            }}
-            resizeMode="contain"
-          />
+          <ImageZoom
+            cropWidth={350}
+            cropHeight={350}
+            imageWidth={350}
+            imageHeight={350}
+          >
+            <ModalImage
+              source={{
+                uri:
+                  list === 1
+                    ? DATA1[activeIndexFirst].uri
+                    : DATA2[activeIndexSecond].uri,
+              }}
+            />
+          </ImageZoom>
         </View>
       </CardModal>
 
@@ -149,16 +161,16 @@ const Semanal: React.FC = () => {
             itemWidth={itemWidth}
             onSnapToItem={(index) => setActiveIndexSecond(index)}
             renderItem={({ item, index }) => (
-              <Card>
-                <TouchableWithoutFeedback onPress={handlePressSecond}>
+              <TouchableWithoutFeedback onPress={handlePressSecond}>
+                <Card>
                   <CardImage
                     source={{
                       uri: `${item.uri}`,
                     }}
                     resizeMode="cover"
                   />
-                </TouchableWithoutFeedback>
-              </Card>
+                </Card>
+              </TouchableWithoutFeedback>
             )}
           />
         </SafeAreaViewSlider>

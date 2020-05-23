@@ -1,5 +1,9 @@
 import styled from 'styled-components/native';
 
+import { Dimensions } from 'react-native';
+
+// const { width, height } = Dimensions.get('window');
+
 export const Container = styled.View`
   flex: 1;
   justify-content: center;
@@ -10,11 +14,4 @@ export const Container = styled.View`
   border-radius: 20px;
 
   background-color: #ebebeb; */
-`;
-
-export const ModalHeader = styled.View`
-  width: 100%;
-  padding: 10px 5px 0 0;
-
-  align-items: flex-end;
 `;
